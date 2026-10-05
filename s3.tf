@@ -16,6 +16,7 @@ provider "aws" {
 # Replace 'unique-bucket-name-student-98765' with your own custom name!
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "s3bucket-gitops-trail-10"
+  force_destroy = true
 
   tags = {
     Name        = "My GitOps Bucket"
